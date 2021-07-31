@@ -12,3 +12,14 @@ def calcular_BMI (x:float, y:float) -> float:
     a = b/c**2
     BMI = round(a,2)
     return BMI
+
+def calcular_cambio(a:int)->str:
+
+    cantidad_500 = int(a/500)
+    x = a%500
+    cantidad_200 = int(x/200)
+    x = x%200
+    cantidad_100 = int(x/100)
+    x = x%100
+    cantidad_50 = int(x/50)
+    return str(cantidad_500)+','+str(cantidad_200)+','+str(cantidad_100)+','+str(cantidad_50)
