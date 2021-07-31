@@ -48,7 +48,7 @@ def calcular_porcentaje_grasa (peso:float,altura:float,edad:int,valor_genero:flo
     c = edad
     d = valor_genero
     IMC = round(a/b**2,2)
-    GC = round(1.2 * IMC + 0.23 * edad - 5.4 - valor_genero,2)
+    GC = round(1.2 * IMC + 0.23 * c - 5.4 - d,2)
     return GC
     
 def calcular_calorias_en_reposo (peso:float,altura:float,edad:int,valor_genero:int) -> float:
@@ -139,5 +139,4 @@ def consumo_calorias_recomendado_para_adelgazar (peso:float,altura:float,edad:in
     c_min = round(TBM * 0.8,2)
     c_max = round(TBM * 0.85,2)
     return "Para adelgazar es recomendado que consumas entre: "+str(c_min)+" y "+str(c_max)+" calorías al día"
-    
-    
+        
