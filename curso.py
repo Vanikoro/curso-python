@@ -23,3 +23,22 @@ def calcular_cambio(a:int)->str:
     x = x%100
     cantidad_50 = int(x/50)
     return str(cantidad_500)+','+str(cantidad_200)+','+str(cantidad_100)+','+str(cantidad_50)
+
+def calcular_horario_llegada(a:int,b:int,c:int,d:int,e:int,f:int) ->str:
+    sllegada = c + f
+    mllegada = b + e
+    hllegada = a + d
+
+
+    if sllegada > 59:
+        sllegada = sllegada%60
+        mllegada+=1
+
+    if mllegada > 59:
+        mllegada = mllegada%60
+        hllegada+=1
+
+    if hllegada >23:
+        hllegada = hllegada % 24
+
+    return str(hllegada)+":"+str(mllegada)+":"+str(sllegada)
