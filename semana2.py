@@ -8,7 +8,7 @@ def es_divisible (n:int,d:int) -> int:
             resultado = 0
     else:
          resultado = 0
-    return str(resultado)      
+    return resultado    
         
     
     
