@@ -153,9 +153,31 @@ def con_num (num_conv:int) -> dict:
     num[3] = (num_conv // 10) % 10
     num[4] = num_conv % 10
     return num
-    
-    
-                
+
+def mejor_del_salon (estudiante1:dict, estudiante2:dict, estudiante3:dict, estudiante4:dict, estudiante5:dict) ->str:
+    prom1 = cal_prom(estudiante1)
+    prom2 = cal_prom(estudiante2)
+    prom3 = cal_prom(estudiante3)
+    prom4 = cal_prom(estudiante4)
+    prom5 = cal_prom(estudiante5)
+    mejor = estudiante1["nombre"]
+    if prom1 < prom2:
+        mejor = estudiante2["nombre"]
+    elif prom2 < prom3:
+        mejor = estudiante3["nombre"]
+    elif prom3 < prom4:
+        mejor = estudiante4["nombre"]
+    elif prom4 < prom5:
+        mejor = estudiante5["nombre"]
+    return mejor
+   
+def cal_prom (est:dict) -> float:
+    x = round((est["matematicas"] + est["español"] + est["ciencias"] + est["literatura"] + est["arte"])/5,2)
+    return x
+
+estudiante1 = {'nombre': 'pedro', 'matematicas': 4.7, 'español': 4.2, 'ciencias': 4.3, 'literatura': 2.5, 'arte': 4.2}
+x = cal_prom(estudiante1)
+print(x)                
 
     
     
