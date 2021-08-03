@@ -161,23 +161,25 @@ def mejor_del_salon (estudiante1:dict, estudiante2:dict, estudiante3:dict, estud
     prom4 = cal_prom(estudiante4)
     prom5 = cal_prom(estudiante5)
     mejor = estudiante1["nombre"]
-    if prom1 < prom2:
+    n_mejor = prom1
+    if n_mejor < prom2:
         mejor = estudiante2["nombre"]
-    elif prom2 < prom3:
+        n_mejor = prom2
+    elif n_mejor < prom3:
         mejor = estudiante3["nombre"]
-    elif prom3 < prom4:
+        n_mejor = prom3
+    elif n_mejor < prom4:
         mejor = estudiante4["nombre"]
-    elif prom4 < prom5:
+        n_mejor = prom4
+    elif n_mejor < prom5:
         mejor = estudiante5["nombre"]
+        n_mejor = prom5
+        
     return mejor
    
 def cal_prom (est:dict) -> float:
     x = round((est["matematicas"] + est["español"] + est["ciencias"] + est["literatura"] + est["arte"])/5,2)
-    return x
-
-estudiante1 = {'nombre': 'pedro', 'matematicas': 4.7, 'español': 4.2, 'ciencias': 4.3, 'literatura': 2.5, 'arte': 4.2}
-x = cal_prom(estudiante1)
-print(x)                
+    return x          
 
     
     
