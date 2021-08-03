@@ -122,6 +122,39 @@ def conteo_de_materias (nombre_materia_1:str, nombre_materia_2:str, nombre_mater
         contador +=1
     return contador
     
+def picas_y_fijas (numero_secreto:int, intento:int) -> dict:
+    num_1 = {}
+    num_2 = {}
+    num_1 = con_num(numero_secreto)
+    num_2 = con_num(intento)
+    p_f = {"PICAS":0, "FIJAS":0}
+    if num_2[1] == num_1[1]:
+        p_f["FIJAS"] += 1
+    elif num_2[1] == num_1[2] or num_2[1] == num_1[3] or num_2[1] == num_1[4]: 
+        p_f["PICAS"] += 1
+    if num_2[2] == num_1[2]:
+        p_f["FIJAS"] += 1
+    elif num_2[2] == num_1[1] or num_2[2] == num_1[3] or num_2[2] == num_1[4]: 
+        p_f["PICAS"] += 1
+    if num_2[3] == num_1[3]:
+        p_f["FIJAS"] += 1
+    elif num_2[3] == num_1[1] or num_2[3] == num_1[2] or num_2[3] == num_1[4]: 
+        p_f["PICAS"] += 1
+    if num_2[4] == num_1[4]:
+        p_f["FIJAS"] += 1
+    elif num_2[4] == num_1[1] or num_2[4] == num_1[2] or num_2[4] == num_1[3]: 
+        p_f["PICAS"] += 1
+    return p_f
+    
+def con_num (num_conv:int) -> dict:
+    num = {}
+    num[1] = num_conv // 1000
+    num[2] = (num_conv // 100) % 10
+    num[3] = (num_conv // 10) % 10
+    num[4] = num_conv % 10
+    return num
+    
+    
                 
 
     
