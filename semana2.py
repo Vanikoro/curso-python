@@ -94,6 +94,33 @@ def media (a:str) -> str:
         p_final = "W"
     return p_final    
     
+def conteo_de_materias (nombre_materia_1:str, nombre_materia_2:str, nombre_materia_3:str) -> int:
+    contador = 0
+    if "programacion" in nombre_materia_1 :
+        contador += 1
+    if "programacion" in nombre_materia_2:
+        contador += 1
+    if "programacion" in nombre_materia_3:
+        contador +=1
+    if "matematica" in nombre_materia_1:
+        contador += 1
+    if "matematica" in nombre_materia_2:
+        contador +=1
+    if "matematica" in nombre_materia_3:
+        contador +=1
+    if "filosofia" in nombre_materia_1:
+        contador += 1
+    if "filosofia" in nombre_materia_2:
+        contador +=1
+    if "filosofia" in nombre_materia_3:
+        contador +=1
+    if "literatura" in nombre_materia_1:
+        contador += 1
+    if "literatura" in nombre_materia_2:
+        contador +=1
+    if "literatura" in nombre_materia_3:
+        contador +=1
+    return contador
     
                 
 
